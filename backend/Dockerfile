@@ -11,4 +11,4 @@ COPY . .
 RUN addgroup -S app && adduser -S app -G app
 USER app
 EXPOSE 4000
-CMD ["npm", "start"]
+CMD ["node", "src/server.js"]
