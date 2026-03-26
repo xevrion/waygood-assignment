@@ -1,8 +1,7 @@
 FROM node:22-alpine AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
-COPY backend/package.json ./backend/package.json
-RUN npm ci --workspace backend --include-workspace-root
+COPY package*.json ./
+RUN npm ci
 
 FROM node:22-alpine AS runtime
 WORKDIR /app
