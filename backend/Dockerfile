@@ -9,6 +9,7 @@ ENV NODE_ENV=production
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN addgroup -S app && adduser -S app -G app
+RUN chown -R app:app /app
 USER app
 EXPOSE 4000
 CMD ["node", "src/server.js"]
