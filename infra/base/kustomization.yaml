@@ -1,0 +1,11 @@
+resources:
+  - namespace.yaml
+  - configmap.yaml
+  - secret.yaml
+  - mongodb.yaml
+  - redis.yaml
+  - backend.yaml
+  - frontend.yaml
+  - worker.yaml
+  - ingress.yaml
+

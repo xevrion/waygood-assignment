@@ -1,0 +1,19 @@
+namespace: waygood-ai
+resources:
+  - ../../base
+
+images:
+  - name: docker.io/example/waygood-backend
+    newTag: staging
+  - name: docker.io/example/waygood-frontend
+    newTag: staging
+  - name: docker.io/example/waygood-worker
+    newTag: staging
+
+configMapGenerator:
+  - name: platform-config
+    behavior: merge
+    literals:
+      - CLIENT_URL=https://staging.waygood.local
+      - VITE_API_BASE_URL=https://staging.waygood.local/api
+

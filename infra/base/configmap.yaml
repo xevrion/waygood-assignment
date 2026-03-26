@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: platform-config
+  namespace: waygood-ai
+data:
+  MONGO_URI: mongodb://mongodb:27017/waygood
+  REDIS_URL: redis://redis:6379
+  REDIS_QUEUE_KEY: ai-task-jobs
+  CLIENT_URL: https://waygood.local
+  VITE_API_BASE_URL: https://waygood.local/api
+  RATE_LIMIT_WINDOW_MS: "900000"
+  RATE_LIMIT_MAX: "200"
+
