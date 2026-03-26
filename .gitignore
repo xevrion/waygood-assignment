@@ -1,0 +1,15 @@
+node_modules
+dist
+build
+.env
+.env.*
+!.env.example
+coverage
+.DS_Store
+*.pyc
+__pycache__
+.pytest_cache
+.venv
+worker/.venv
+frontend/.vite
+
