@@ -8,7 +8,7 @@ FROM node:22-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=deps /app/node_modules ./node_modules
-COPY backend ./
+COPY backend .
 RUN addgroup -S app && adduser -S app -G app
 USER app
 EXPOSE 4000
