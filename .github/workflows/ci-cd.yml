@@ -39,19 +39,19 @@ jobs:
         with:
           context: ./backend
           push: true
-          tags: docker.io/example/waygood-backend:${{ github.sha }}
+          tags: docker.io/whoarryou/waygood-backend:${{ github.sha }}
       - name: Build and push frontend
         uses: docker/build-push-action@v6
         with:
           context: ./frontend
           push: true
-          tags: docker.io/example/waygood-frontend:${{ github.sha }}
+          tags: docker.io/whoarryou/waygood-frontend:${{ github.sha }}
       - name: Build and push worker
         uses: docker/build-push-action@v6
         with:
           context: ./worker
           push: true
-          tags: docker.io/example/waygood-worker:${{ github.sha }}
+          tags: docker.io/whoarryou/waygood-worker:${{ github.sha }}
       - name: Update infra image tags
         env:
           GIT_SHA: ${{ github.sha }}
